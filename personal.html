@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jacob Tan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="personal-styles.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="personal-page">
+    <!-- Password Modal -->
+    <div id="passwordModal" class="password-modal">
+        <div class="password-modal-content">
+            <div class="password-header">
+                <i class="fas fa-lock"></i>
+                <h2>Access Required</h2>
+            </div>
+            <p>Enter the password to view this page</p>
+            <form id="passwordForm">
+                <input type="password" id="passwordInput" placeholder="Enter password..." autocomplete="off">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-key"></i>
+                    Unlock
+                </button>
+            </form>
+            <div id="passwordError" class="password-error"></div>
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden by default) -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">About Me</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <a href="index.html" class="btn btn-secondary btn-small">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Portfolio
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="personal-hero">
+            <div class="container">
+                <h1 class="hero-title">
+                    <span class="code-tag">&lt;beyond-code&gt;</span>
+                    Beyond the Code
+                </h1>
+                <p class="hero-subtitle">Life beyond the terminal - music, sports, and creative pursuits</p>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section id="music" class="personal-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-music"></i>
+                    Music
+                </h2>
+                <p class="section-intro">Music is where I express myself beyond code</p>
+
+                <div class="button-grid">
+                    <a href="personal/music/performances.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <h3>My Performances</h3>
+                        <p>Original covers and live sessions</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/music/recreations.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-compact-disc"></i>
+                        </div>
+                        <h3>Recreations</h3>
+                        <p>Song covers and remakes</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/music/playlists.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fab fa-spotify"></i>
+                        </div>
+                        <h3>My Playlists</h3>
+                        <p>Curated music collections</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/music/favorites.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Favorite Songs</h3>
+                        <p>Current rotation and all-time favorites</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soccer Section -->
+        <section id="soccer" class="personal-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-futbol"></i>
+                    Soccer
+                </h2>
+                <p class="section-intro">The beautiful game - my journey on the field</p>
+
+                <div class="button-grid">
+                    <a href="personal/soccer/action.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>In Action</h3>
+                        <p>Game photos and field moments</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/soccer/achievements.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Achievements</h3>
+                        <p>Trophies, milestones & timeline</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/soccer/highlights.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Highlight Reel</h3>
+                        <p>Game videos and skills</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anime Section -->
+        <section id="anime" class="personal-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-tv"></i>
+                    Anime
+                </h2>
+                <p class="section-intro">Stories that inspire and worlds that captivate</p>
+
+                <div class="button-grid">
+                    <a href="personal/anime/top10.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Top 10 Anime</h3>
+                        <p>My all-time favorite series</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/anime/watching.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <h3>Currently Watching</h3>
+                        <p>What I'm watching right now</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Interests -->
+        <section id="other" class="personal-section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-palette"></i>
+                    Other Interests
+                </h2>
+                <p class="section-intro">More things I'm passionate about</p>
+
+                <div class="button-grid">
+                    <a href="personal/other/photography.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Photography</h3>
+                        <p>Visual stories and moments</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="personal/other/creative.html" class="nav-button">
+                        <div class="button-icon">
+                            <i class="fas fa-paintbrush"></i>
+                        </div>
+                        <h3>Creative Projects</h3>
+                        <p>Art, design, and more</p>
+                        <span class="button-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <p>&copy; 2025 Jacob Tan. All rights reserved.</p>
+                    <a href="index.html" class="footer-link">Back to Portfolio</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Don't load script.js - it's for the main portfolio page only -->
+    <script src="personal.js?v=12"></script>
+</body>
+</html>
