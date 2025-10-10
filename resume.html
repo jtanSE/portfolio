@@ -212,6 +212,7 @@
             body {
                 background: white;
                 padding: 0;
+                line-height: 1.15 !important;
             }
 
             .resume-container {
@@ -230,11 +231,13 @@
 
             .header h1 {
                 font-size: 1.3em !important;
+                font-weight: 300 !important;
                 margin-bottom: 1px !important;
             }
 
             .header .title {
                 font-size: 0.68em !important;
+                opacity: 0.9 !important;
                 margin-bottom: 3px !important;
             }
 
@@ -254,37 +257,146 @@
                 padding: 10px !important;
             }
 
+            .top-section {
+                display: grid !important;
+                grid-template-columns: 2fr 1fr !important;
+                gap: 15px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .top-section .section {
+                margin-bottom: 0 !important;
+            }
+
             .section {
                 margin-bottom: 8px !important;
                 page-break-inside: avoid;
             }
 
             .section h2 {
+                color: #667eea !important;
                 font-size: 0.88em !important;
                 margin-bottom: 4px !important;
                 padding-bottom: 1px !important;
+                border-bottom: 1.5px solid #667eea !important;
+            }
+
+            .objective {
+                font-style: italic !important;
+                color: #555 !important;
+                line-height: 1.25 !important;
+                font-size: 0.72em !important;
             }
 
             .skills-grid {
-                grid-template-columns: 1fr 1fr;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
                 gap: 6px !important;
+            }
+
+            .skill-category h3 {
+                color: #333 !important;
+                font-size: 0.75em !important;
+                margin-bottom: 3px !important;
+            }
+
+            .skill-list {
+                color: #666 !important;
+                font-size: 0.7em !important;
             }
 
             .experience-item, .education-item {
                 page-break-inside: avoid;
                 margin-bottom: 3px !important;
                 padding-bottom: 3px !important;
+                border-bottom: 1px solid #eee !important;
+            }
+
+            .experience-item:last-child, .education-item:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .item-header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                margin-bottom: 1px !important;
+                flex-wrap: wrap !important;
+            }
+
+            .item-title {
+                font-weight: 600 !important;
+                color: #333 !important;
+            }
+
+            .item-company {
+                color: #667eea !important;
+                font-weight: 500 !important;
+            }
+
+            .item-date {
+                color: #888 !important;
+                font-size: 0.9em !important;
+                font-style: italic !important;
+            }
+
+            .item-description {
+                margin-top: 2px !important;
+            }
+
+            .item-description ul {
+                margin-left: 18px !important;
+                color: #555 !important;
             }
 
             .item-description li {
-                font-size: 0.66em !important;
                 margin-bottom: 0px !important;
+                font-size: 0.66em !important;
                 line-height: 1.15 !important;
             }
 
             .project-item {
                 margin-bottom: 2px !important;
                 padding-bottom: 2px !important;
+                border-bottom: 1px solid #eee !important;
+            }
+
+            .project-item:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .project-title {
+                font-weight: 600 !important;
+                color: #333 !important;
+                font-size: 0.75em !important;
+                display: inline !important;
+            }
+
+            .project-tech {
+                font-size: 0.62em !important;
+                color: #888 !important;
+                display: inline !important;
+                margin-left: 5px !important;
+            }
+
+            .project-tech::before {
+                content: " | " !important;
+            }
+
+            .project-description {
+                font-size: 0.65em !important;
+                color: #555 !important;
+                line-height: 1.2 !important;
+                margin-top: 1px !important;
+            }
+
+            .education-gpa {
+                color: #667eea !important;
+                font-weight: 500 !important;
             }
 
             .bottom-section {
@@ -297,30 +409,6 @@
 
             .bottom-section .section {
                 margin-bottom: 0 !important;
-            }
-
-            .top-section {
-                display: grid !important;
-                grid-template-columns: 2fr 1fr !important;
-                gap: 15px !important;
-                margin-bottom: 8px !important;
-            }
-
-            .top-section .section {
-                margin-bottom: 0 !important;
-            }
-
-            .objective {
-                font-size: 0.72em !important;
-                line-height: 1.25 !important;
-            }
-
-            .item-header {
-                margin-bottom: 1px !important;
-            }
-
-            .item-description {
-                margin-top: 2px !important;
             }
         }
 
