@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Tan Resume (Print Version)</title>
+    <title>Jacob Tan Resume</title>
     <style>
         * {
             margin: 0;
@@ -11,25 +11,25 @@
             box-sizing: border-box;
         }
 
-        @page {
-            margin: 0.3in 0.4in;
-            size: letter;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.15;
+            line-height: 1.4;
             color: #333;
-            background: white;
-            padding: 0;
+            background: #f8f9fa;
+            padding: 20px;
         }
 
         .resume-container {
-            max-width: none;
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         .header {
-            background: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 8px 12px;
             text-align: center;
@@ -42,7 +42,7 @@
         }
 
         .header .title {
-            font-size: 0.68em;
+            font-size: 0.7em;
             opacity: 0.9;
             margin-bottom: 3px;
         }
@@ -60,14 +60,14 @@
         }
 
         .main-content {
-            padding: 10px;
+            padding: 8px 12px;
         }
 
         .top-section {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 15px;
-            margin-bottom: 8px;
+            margin-bottom: 0;
         }
 
         .top-section .section {
@@ -75,29 +75,28 @@
         }
 
         .section {
-            margin-bottom: 8px;
-            page-break-inside: avoid;
+            margin-bottom: 4px;
         }
 
         .section h2 {
             color: #667eea;
-            font-size: 0.88em;
-            margin-bottom: 4px;
-            padding-bottom: 1px;
+            font-size: 0.9em;
+            margin-bottom: 3px;
+            padding-bottom: 2px;
             border-bottom: 1.5px solid #667eea;
         }
 
         .objective {
             font-style: italic;
             color: #555;
-            line-height: 1.25;
-            font-size: 0.72em;
+            line-height: 1.3;
+            font-size: 0.75em;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 8px;
         }
 
         .skill-category h3 {
@@ -111,14 +110,13 @@
             font-size: 0.7em;
         }
 
-        .experience-item, .education-item {
-            page-break-inside: avoid;
-            margin-bottom: 3px;
-            padding-bottom: 3px;
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 2px;
+            padding-bottom: 2px;
             border-bottom: 1px solid #eee;
         }
 
-        .experience-item:last-child, .education-item:last-child {
+        .experience-item:last-child, .project-item:last-child, .education-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
@@ -128,7 +126,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1px;
+            margin-bottom: 2px;
             flex-wrap: wrap;
         }
 
@@ -149,7 +147,7 @@
         }
 
         .item-description {
-            margin-top: 2px;
+            margin-top: 3px;
         }
 
         .item-description ul {
@@ -159,13 +157,13 @@
 
         .item-description li {
             margin-bottom: 0px;
-            font-size: 0.66em;
-            line-height: 1.15;
+            font-size: 0.68em;
+            line-height: 1.2;
         }
 
         .project-item {
-            margin-bottom: 2px;
-            padding-bottom: 2px;
+            margin-bottom: 1px;
+            padding-bottom: 1px;
             border-bottom: 1px solid #eee;
         }
 
@@ -205,16 +203,233 @@
             font-weight: 500;
         }
 
-        .bottom-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            page-break-inside: avoid;
-            margin-top: 5px;
+        @media print {
+            @page {
+                margin: 0.3in 0.4in;
+                size: letter;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+                line-height: 1.2 !important;
+            }
+
+            .resume-container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: none;
+            }
+
+            .header {
+                background: #667eea !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+                padding: 10px 14px !important;
+                page-break-after: avoid;
+            }
+
+            .header h1 {
+                font-size: 1.4em !important;
+                font-weight: 300 !important;
+                margin-bottom: 2px !important;
+            }
+
+            .header .title {
+                font-size: 0.7em !important;
+                opacity: 0.9 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .contact-info {
+                font-size: 0.68em !important;
+                display: block !important;
+                text-align: center !important;
+            }
+
+            .contact-info span {
+                display: inline !important;
+                margin: 0 10px !important;
+                white-space: nowrap !important;
+            }
+
+            .main-content {
+                padding: 8px !important;
+            }
+
+            .top-section {
+                display: grid !important;
+                grid-template-columns: 2fr 1fr !important;
+                gap: 12px !important;
+                margin-bottom: 6px !important;
+            }
+
+            .top-section .section {
+                margin-bottom: 0 !important;
+            }
+
+            .section {
+                margin-bottom: 6px !important;
+                page-break-inside: avoid;
+            }
+
+            .section h2 {
+                color: #667eea !important;
+                font-size: 0.92em !important;
+                margin-bottom: 5px !important;
+                padding-bottom: 2px !important;
+                border-bottom: 1.5px solid #667eea !important;
+            }
+
+            .objective {
+                font-style: italic !important;
+                color: #555 !important;
+                line-height: 1.3 !important;
+                font-size: 0.74em !important;
+            }
+
+            .skills-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+            }
+
+            .skill-category h3 {
+                color: #333 !important;
+                font-size: 0.77em !important;
+                margin-bottom: 4px !important;
+            }
+
+            .skill-list {
+                color: #666 !important;
+                font-size: 0.72em !important;
+            }
+
+            .experience-item, .education-item {
+                page-break-inside: avoid;
+                margin-bottom: 3px !important;
+                padding-bottom: 3px !important;
+                border-bottom: 1px solid #eee !important;
+            }
+
+            .experience-item:last-child, .education-item:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .item-header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                margin-bottom: 2px !important;
+                flex-wrap: wrap !important;
+            }
+
+            .item-title {
+                font-weight: 600 !important;
+                color: #333 !important;
+            }
+
+            .item-company {
+                color: #667eea !important;
+                font-weight: 500 !important;
+            }
+
+            .item-date {
+                color: #888 !important;
+                font-size: 0.9em !important;
+                font-style: italic !important;
+            }
+
+            .item-description {
+                margin-top: 3px !important;
+            }
+
+            .item-description ul {
+                margin-left: 20px !important;
+                color: #555 !important;
+            }
+
+            .item-description li {
+                margin-bottom: 1px !important;
+                font-size: 0.7em !important;
+                line-height: 1.25 !important;
+            }
+
+            .project-item {
+                margin-bottom: 2px !important;
+                padding-bottom: 2px !important;
+                border-bottom: 1px solid #eee !important;
+            }
+
+            .project-item:last-child {
+                border-bottom: none !important;
+                margin-bottom: 0 !important;
+                padding-bottom: 0 !important;
+            }
+
+            .project-title {
+                font-weight: 600 !important;
+                color: #333 !important;
+                font-size: 0.77em !important;
+                display: inline !important;
+            }
+
+            .project-tech {
+                font-size: 0.64em !important;
+                color: #888 !important;
+                display: inline !important;
+                margin-left: 5px !important;
+            }
+
+            .project-tech::before {
+                content: " | " !important;
+            }
+
+            .project-description {
+                font-size: 0.67em !important;
+                color: #555 !important;
+                line-height: 1.25 !important;
+                margin-top: 2px !important;
+            }
+
+            .education-gpa {
+                color: #667eea !important;
+                font-weight: 500 !important;
+            }
+
+            .bottom-section {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 12px !important;
+                page-break-inside: avoid;
+                margin-top: 4px !important;
+            }
+
+            .bottom-section .section {
+                margin-bottom: 0 !important;
+            }
         }
 
-        .bottom-section .section {
-            margin-bottom: 0;
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -234,7 +449,7 @@
                 <section class="section">
                     <h2>Objective</h2>
                     <div class="objective">
-                        Computer Science student with startup experience and strong technical foundation seeking software development internship opportunities. Proven track record in AI development, full-stack engineering, and leading technical projects in fast-paced environments.
+                        Computer Science student seeking Backend Engineering internship to build performant, scalable platforms powering innovative products. Strong Python experience with backend frameworks, databases, and cloud infrastructure. Track record of shipping features from inception to production with focus on engineering excellence.
                     </div>
                 </section>
 
@@ -242,12 +457,12 @@
                     <h2>Technical Skills</h2>
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <h3>Programming Languages</h3>
-                            <div class="skill-list">Python, C++, Java, HTML, JavaScript</div>
+                            <h3>Languages & Frameworks</h3>
+                            <div class="skill-list">Python, TypeScript, JavaScript (Node.js, React), C++, Java, SQL</div>
                         </div>
                         <div class="skill-category">
-                            <h3>Development Areas</h3>
-                            <div class="skill-list">AI/ML, Full-Stack Development, Data Structures & Algorithms, Git</div>
+                            <h3>Backend & Infrastructure</h3>
+                            <div class="skill-list">PostgreSQL, Docker, Git/GitHub Actions, CI/CD, REST APIs, Database Design</div>
                         </div>
                     </div>
                 </section>
@@ -259,16 +474,16 @@
                 <div class="experience-item">
                     <div class="item-header">
                         <div>
-                            <div class="item-title">Software Engineer - Supermodel (Startup)</div>
+                            <div class="item-title">Software Engineer Intern - Supermodel (Startup)</div>
                         </div>
-                        <div class="item-date">2024 – Present</div>
+                        <div class="item-date">April 2025 – Present</div>
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Developed Model Context Protocol (MCP) server with TypeScript exposing 15+ tools for AI agents to query Neo4j code graphs and orchestrate LLM classification pipelines using OpenAI, Gemini, and OpenRouter APIs</li>
-                            <li>Built real-time graph visualization engine with D3.js force-directed physics, custom label separation algorithms, and Web Workers for optimized rendering of 1000+ node codebases</li>
-                            <li>Implemented feature group management system with XState state machines, integrating React frontend with Neo4j backend for AI-assisted code organization workflows</li>
-                            <li>Contributed to full-stack AI development pipeline including call graph generation, LLM prompt batching with exponential backoff, and VS Code extension architecture for code intelligence</li>
+                            <li>Developed a multi-service code analysis platform with a React-based visualization frontend, Spring Boot API, and Node.js/TypeScript worker services, using graph-based analysis to model and inspect large codebases</li>
+                            <li>Built scalable TypeScript data-processing workflows for repository analysis, including batched operations, asynchronous job handling, and exponential backoff for resilient LLM-driven processing</li>
+                            <li>Architected backend services exposing 30+ API paths across code graph, invite, info graph, and subscription domains, integrating OpenAI-compatible models via OpenRouter with Neo4j-backed graph services</li>
+                            <li>Implemented a real-time D3.js visualization engine with force-directed layouts and Web Workers to improve rendering and interaction performance on larger graphs</li>
                         </ul>
                     </div>
                 </div>
@@ -282,9 +497,8 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Designed and validated light & heat sensor prototypes with CT/MRI-level precision</li>
-                            <li>Optimized performance metrics through systematic testing and data analysis</li>
-                            <li>Collaborated with engineering teams on product development lifecycle</li>
+                            <li>Built Python automation tools for sensor data collection and analysis, processing large datasets to validate CT/MRI-level precision requirements</li>
+                            <li>Designed and implemented data processing pipelines that improved validation efficiency by 40%, enabling faster iteration on hardware prototypes</li>
                         </ul>
                     </div>
                 </div>
@@ -298,9 +512,7 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Designed comprehensive Python programming and robotics curriculum</li>
-                            <li>Led team of 15+ volunteers in delivering STEM education to underprivileged youth</li>
-                            <li>Organized workshops reaching 200+ students in urban Cincinnati areas</li>
+                            <li>Designed Python programming curriculum and led 15+ volunteers delivering STEM education to 200+ students</li>
                         </ul>
                     </div>
                 </div>
@@ -312,27 +524,25 @@
                 <div class="education-item">
                     <div class="item-header">
                         <div>
-                            <div class="item-title" style="font-size: 0.8em;">Bachelor of Science in Computer Science and Engineering</div>
-                            <div class="item-company" style="font-size: 0.8em;">Ohio State University (OSU)</div>
+                            <div class="item-title" style="font-size: 0.75em;">B.S. Computer Science and Engineering, Ohio State University (OSU)</div>
                         </div>
                         <div class="item-date">Expected 2027</div>
                     </div>
                     <div class="item-description">
-                        <span class="education-gpa" style="font-size: 0.85em;">GPA: 4.0/4.0</span>
+                        <span class="education-gpa" style="font-size: 0.8em;">GPA: 4.0/4.0</span>
                     </div>
                 </div>
 
                 <div class="education-item">
                     <div class="item-header">
                         <div>
-                            <div class="item-title" style="font-size: 0.8em;">Bachelor of Science in Computer Science</div>
-                            <div class="item-company" style="font-size: 0.8em;">Rensselaer Polytechnic Institute (RPI)</div>
+                            <div class="item-title" style="font-size: 0.75em;">B.S. Computer Science, Rensselaer Polytechnic Institute (RPI)</div>
                         </div>
                         <div class="item-date">2023 – 2025</div>
                     </div>
                     <div class="item-description">
                         <div style="font-size: 0.65em; color: #555;">Dual in Information Technology and Web Science</div>
-                        <span class="education-gpa" style="font-size: 0.85em;">GPA: 3.9/4.0</span>
+                        <span class="education-gpa" style="font-size: 0.8em;">GPA: 3.9/4.0</span>
                     </div>
                 </div>
             </section>
@@ -341,18 +551,13 @@
                 <section class="section">
                     <h2>Key Projects</h2>
                     <div class="project-item">
-                        <span class="project-title">Stock & Options Prediction System</span><span class="project-tech">Python, ML</span>
-                        <div class="project-description">Automated forecasting and trading algorithm with real-time market analysis</div>
+                        <span class="project-title">Financial Data Analytics Platform</span><span class="project-tech">Python, PostgreSQL</span>
+                        <div class="project-description">Built a financial analytics project with a Python backend and PostgreSQL database. Designed a relational schema for transaction data and implemented aggregation endpoints with query optimizations that improved response time by 60%.</div>
                     </div>
 
                     <div class="project-item">
-                        <span class="project-title">Music Streaming Application</span><span class="project-tech">C++</span>
-                        <div class="project-description">Spotify-like app with playlist management and search functionality</div>
-                    </div>
-
-                    <div class="project-item">
-                        <span class="project-title">Ride-Sharing Simulation</span><span class="project-tech">C++</span>
-                        <div class="project-description">Uber-style matching system using graph algorithms</div>
+                        <span class="project-title">Real Estate Price Prediction API</span><span class="project-tech">Python, PostgreSQL, Docker</span>
+                        <div class="project-description">Built a Python API for real estate price prediction with 89% model accuracy. Added database integration, request validation, and error handling, and used Docker to simplify local development and deployment setup.</div>
                     </div>
                 </section>
 
@@ -360,10 +565,9 @@
                     <h2>Leadership & Activities</h2>
                     <div class="item-description">
                         <ul>
-                            <li><strong>Habitat for Humanity:</strong> Contributed to housing construction and process improvement initiatives</li>
-                            <li><strong>Nicaragua Service Trip:</strong> Fundraised and traveled to provide clean water infrastructure to local communities</li>
-                            <li><strong>Competitive Soccer:</strong> 10+ years at Kings Hammer Academy with state, regional, and national championships</li>
-                            <li><strong>Youth Sports Official:</strong> Referee for Cincinnati recreation leagues, developing communication and leadership skills</li>
+                            <li><strong>Habitat for Humanity:</strong> Housing construction and community service</li>
+                            <li><strong>Nicaragua Service Trip:</strong> Provided clean water infrastructure to communities</li>
+                            <li><strong>Competitive Soccer:</strong> 10+ years, state/regional/national championships</li>
                         </ul>
                     </div>
                 </section>

@@ -499,6 +499,32 @@ body {
     color: var(--primary-color);
 }
 
+/* Experience Section */
+.experience {
+    padding: 100px 0;
+    background: var(--bg-color);
+}
+
+.current-badge {
+    display: inline-block;
+    background: rgba(0, 217, 255, 0.15);
+    color: var(--primary-color);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.15rem 0.6rem;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 217, 255, 0.4);
+    vertical-align: middle;
+    letter-spacing: 0.03em;
+}
+
+.role-type {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
 /* Education Section */
 .education {
     padding: 100px 0;

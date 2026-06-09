@@ -215,6 +215,93 @@ body.personal-page {
     font-style: italic;
 }
 
+/* Podcast Section */
+.podcast-section {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.podcast-feature {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--nature-surface);
+    border: 2px solid var(--nature-border);
+    border-radius: 20px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 0 8px 28px rgba(107, 142, 111, 0.1);
+}
+
+.podcast-art {
+    aspect-ratio: 1;
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.55), transparent 28%),
+        linear-gradient(135deg, var(--nature-primary) 0%, var(--nature-secondary) 54%, var(--nature-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    box-shadow: 0 12px 30px rgba(107, 142, 111, 0.22);
+}
+
+.podcast-content {
+    text-align: left;
+}
+
+.podcast-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(160, 196, 157, 0.18);
+    color: var(--nature-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.podcast-content h3 {
+    margin: 0 0 0.75rem;
+    color: var(--nature-text);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.podcast-content p {
+    margin: 0;
+    color: var(--nature-text-secondary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+
+.podcast-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.25rem;
+}
+
+.podcast-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--nature-text);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.podcast-meta i {
+    color: var(--nature-accent);
+}
+
 /* Content Cards - Natural Style */
 .content-grid {
     display: grid;
@@ -892,6 +979,34 @@ a.nav-button:hover .button-arrow {
 
     .button-grid {
         gap: 1.5rem;
+    }
+
+    .podcast-feature {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .podcast-art {
+        width: min(180px, 100%);
+        margin: 0 auto;
+    }
+
+    .podcast-content {
+        text-align: center;
+    }
+
+    .podcast-label {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .podcast-content h3 {
+        font-size: 1.7rem;
+    }
+
+    .podcast-meta {
+        justify-content: center;
     }
 
     a.nav-button {

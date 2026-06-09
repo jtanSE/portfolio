@@ -13,61 +13,61 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.4;
+            line-height: 1.6;
             color: #333;
             background: #f8f9fa;
-            padding: 20px;
+            padding: 40px;
         }
 
         .resume-container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            border-radius: 12px;
             overflow: hidden;
         }
 
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 8px 12px;
+            padding: 40px 50px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 1.3em;
+            font-size: 2.8em;
             font-weight: 300;
-            margin-bottom: 1px;
+            margin-bottom: 10px;
         }
 
         .header .title {
-            font-size: 0.7em;
-            opacity: 0.9;
-            margin-bottom: 3px;
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 15px;
         }
 
         .contact-info {
-            font-size: 0.65em;
+            font-size: 1em;
             display: block;
             text-align: center;
         }
 
         .contact-info span {
             display: inline;
-            margin: 0 8px;
+            margin: 0 20px;
             white-space: nowrap;
         }
 
         .main-content {
-            padding: 8px 12px;
+            padding: 50px 60px;
         }
 
         .top-section {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 15px;
-            margin-bottom: 0;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
         .top-section .section {
@@ -75,45 +75,46 @@
         }
 
         .section {
-            margin-bottom: 4px;
+            margin-bottom: 35px;
         }
 
         .section h2 {
             color: #667eea;
-            font-size: 0.9em;
-            margin-bottom: 3px;
-            padding-bottom: 2px;
-            border-bottom: 1.5px solid #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
         }
 
         .objective {
             font-style: italic;
             color: #555;
-            line-height: 1.3;
-            font-size: 0.75em;
+            line-height: 1.7;
+            font-size: 1.1em;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .skill-category h3 {
             color: #333;
-            font-size: 0.75em;
-            margin-bottom: 3px;
+            font-size: 1.1em;
+            margin-bottom: 8px;
         }
 
         .skill-list {
             color: #666;
-            font-size: 0.7em;
+            font-size: 1em;
+            line-height: 1.5;
         }
 
         .experience-item, .project-item, .education-item {
-            margin-bottom: 2px;
-            padding-bottom: 2px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .experience-item:last-child, .project-item:last-child, .education-item:last-child {
@@ -126,45 +127,47 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 2px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
         }
 
         .item-title {
             font-weight: 600;
             color: #333;
+            font-size: 1.2em;
         }
 
         .item-company {
             color: #667eea;
             font-weight: 500;
+            font-size: 1.1em;
         }
 
         .item-date {
             color: #888;
-            font-size: 0.9em;
+            font-size: 1em;
             font-style: italic;
         }
 
         .item-description {
-            margin-top: 3px;
+            margin-top: 12px;
         }
 
         .item-description ul {
-            margin-left: 18px;
+            margin-left: 25px;
             color: #555;
         }
 
         .item-description li {
-            margin-bottom: 0px;
-            font-size: 0.68em;
-            line-height: 1.2;
+            margin-bottom: 10px;
+            font-size: 1em;
+            line-height: 1.6;
         }
 
         .project-item {
-            margin-bottom: 1px;
-            padding-bottom: 1px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .project-item:last-child {
@@ -176,15 +179,15 @@
         .project-title {
             font-weight: 600;
             color: #333;
-            font-size: 0.75em;
+            font-size: 1.15em;
             display: inline;
         }
 
         .project-tech {
-            font-size: 0.62em;
+            font-size: 0.95em;
             color: #888;
             display: inline;
-            margin-left: 5px;
+            margin-left: 8px;
         }
 
         .project-tech::before {
@@ -192,15 +195,22 @@
         }
 
         .project-description {
-            font-size: 0.65em;
+            font-size: 1em;
             color: #555;
-            line-height: 1.2;
-            margin-top: 1px;
+            line-height: 1.6;
+            margin-top: 8px;
         }
 
         .education-gpa {
             color: #667eea;
             font-weight: 500;
+            font-size: 1.05em;
+        }
+
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
 
         @media print {
@@ -449,7 +459,7 @@
                 <section class="section">
                     <h2>Objective</h2>
                     <div class="objective">
-                        Computer Science student with startup experience and strong technical foundation seeking software development internship opportunities. Proven track record in AI development, full-stack engineering, and leading technical projects in fast-paced environments.
+                        Computer Science student seeking backend engineering and game services internship. Strong foundation in distributed systems, cloud services, and event-driven architecture.
                     </div>
                 </section>
 
@@ -458,11 +468,11 @@
                     <div class="skills-grid">
                         <div class="skill-category">
                             <h3>Programming Languages</h3>
-                            <div class="skill-list">Python, C++, Java, HTML, JavaScript</div>
+                            <div class="skill-list">Java, Python, TypeScript, C++, JavaScript</div>
                         </div>
                         <div class="skill-category">
                             <h3>Development Areas</h3>
-                            <div class="skill-list">AI/ML, Full-Stack Development, Data Structures & Algorithms, Git</div>
+                            <div class="skill-list">Backend Services, Distributed Systems, REST APIs, Event-Driven Architecture</div>
                         </div>
                     </div>
                 </section>
@@ -480,10 +490,10 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Developed Model Context Protocol (MCP) server with TypeScript exposing 15+ tools for AI agents to query Neo4j code graphs and orchestrate LLM classification pipelines using OpenAI, Gemini, and OpenRouter APIs</li>
-                            <li>Built real-time graph visualization engine with D3.js force-directed physics, custom label separation algorithms, and Web Workers for optimized rendering of 1000+ node codebases</li>
-                            <li>Implemented feature group management system with XState state machines, integrating React frontend with Neo4j backend for AI-assisted code organization workflows</li>
-                            <li>Contributed to full-stack AI development pipeline including call graph generation, LLM prompt batching with exponential backoff, and VS Code extension architecture for code intelligence</li>
+                            <li>Developed a multi-service code analysis platform with a React-based visualization frontend, Spring Boot API, and Node.js/TypeScript worker services, using graph-based analysis to model and inspect large codebases</li>
+                            <li>Built scalable TypeScript data-processing workflows for repository analysis, including batched operations, asynchronous job handling, and exponential backoff for resilient LLM-driven processing</li>
+                            <li>Architected backend services exposing 30+ API paths across code graph, invite, info graph, and subscription domains, integrating OpenAI-compatible models via OpenRouter with Neo4j-backed graph services</li>
+                            <li>Implemented a real-time D3.js visualization engine with force-directed layouts and Web Workers to improve rendering and interaction performance on larger graphs</li>
                         </ul>
                     </div>
                 </div>
@@ -497,9 +507,8 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Designed and validated light & heat sensor prototypes with CT/MRI-level precision</li>
-                            <li>Optimized performance metrics through systematic testing and data analysis</li>
-                            <li>Collaborated with engineering teams on product development lifecycle</li>
+                            <li>Designed and validated light & heat sensor prototypes with CT/MRI-level precision through systematic testing</li>
+                            <li>Optimized performance metrics through data analysis and collaborated with engineering teams on product development</li>
                         </ul>
                     </div>
                 </div>
@@ -513,9 +522,7 @@
                     </div>
                     <div class="item-description">
                         <ul>
-                            <li>Designed comprehensive Python programming and robotics curriculum</li>
-                            <li>Led team of 15+ volunteers in delivering STEM education to underprivileged youth</li>
-                            <li>Organized workshops reaching 200+ students in urban Cincinnati areas</li>
+                            <li>Designed Python programming curriculum and led 15+ volunteers delivering STEM education to 200+ students</li>
                         </ul>
                     </div>
                 </div>
@@ -527,27 +534,25 @@
                 <div class="education-item">
                     <div class="item-header">
                         <div>
-                            <div class="item-title" style="font-size: 0.8em;">Bachelor of Science in Computer Science and Engineering</div>
-                            <div class="item-company" style="font-size: 0.8em;">Ohio State University (OSU)</div>
+                            <div class="item-title" style="font-size: 0.75em;">B.S. Computer Science and Engineering, Ohio State University (OSU)</div>
                         </div>
                         <div class="item-date">Expected 2027</div>
                     </div>
                     <div class="item-description">
-                        <span class="education-gpa" style="font-size: 0.85em;">GPA: 4.0/4.0</span>
+                        <span class="education-gpa" style="font-size: 0.8em;">GPA: 4.0/4.0</span>
                     </div>
                 </div>
 
                 <div class="education-item">
                     <div class="item-header">
                         <div>
-                            <div class="item-title" style="font-size: 0.8em;">Bachelor of Science in Computer Science</div>
-                            <div class="item-company" style="font-size: 0.8em;">Rensselaer Polytechnic Institute (RPI)</div>
+                            <div class="item-title" style="font-size: 0.75em;">B.S. Computer Science, Rensselaer Polytechnic Institute (RPI)</div>
                         </div>
                         <div class="item-date">2023 – 2025</div>
                     </div>
                     <div class="item-description">
                         <div style="font-size: 0.65em; color: #555;">Dual in Information Technology and Web Science</div>
-                        <span class="education-gpa" style="font-size: 0.85em;">GPA: 3.9/4.0</span>
+                        <span class="education-gpa" style="font-size: 0.8em;">GPA: 3.9/4.0</span>
                     </div>
                 </div>
             </section>
@@ -561,13 +566,13 @@
                     </div>
 
                     <div class="project-item">
-                        <span class="project-title">Music Streaming Application</span><span class="project-tech">C++</span>
-                        <div class="project-description">Spotify-like app with playlist management and search functionality</div>
+                        <span class="project-title">Real Estate Investment ML Platform</span><span class="project-tech">Python, ML, Web Scraping</span>
+                        <div class="project-description">Regression-based price prediction with automated data collection and alert system for undervalued properties</div>
                     </div>
 
                     <div class="project-item">
-                        <span class="project-title">Ride-Sharing Simulation</span><span class="project-tech">C++</span>
-                        <div class="project-description">Uber-style matching system using graph algorithms</div>
+                        <span class="project-title">In The Dungeon - 2D Roguelike Game</span><span class="project-tech">Rust</span>
+                        <div class="project-description">Built game engine from scratch featuring procedural dungeon generation, entity-component architecture, and memory-safe systems programming</div>
                     </div>
                 </section>
 
@@ -578,7 +583,6 @@
                             <li><strong>Habitat for Humanity:</strong> Contributed to housing construction and process improvement initiatives</li>
                             <li><strong>Nicaragua Service Trip:</strong> Fundraised and traveled to provide clean water infrastructure to local communities</li>
                             <li><strong>Competitive Soccer:</strong> 10+ years at Kings Hammer Academy with state, regional, and national championships</li>
-                            <li><strong>Youth Sports Official:</strong> Referee for Cincinnati recreation leagues, developing communication and leadership skills</li>
                         </ul>
                     </div>
                 </section>
