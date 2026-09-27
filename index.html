@@ -23,6 +23,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#shmacs" class="nav-link">SHMACS</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -209,6 +210,52 @@
         </div>
     </section>
 
+    <!-- Featured Business -->
+    <section id="shmacs" class="venture">
+        <div class="container">
+            <h2 class="section-title"><span class="code-tag">&lt;building_a_business&gt;</span></h2>
+            <article class="venture-card" aria-labelledby="shmacs-title">
+                <div class="venture-intro">
+                    <p class="venture-eyebrow">SHMACS / Education technology</p>
+                    <h3 id="shmacs-title">A clearer path from course discovery to graduation.</h3>
+                    <p class="venture-lead">We're building SHMACS into a business: an AI-first platform for course discovery, academic planning, and advising support that helps students make informed decisions about what comes next.</p>
+                    <div class="venture-actions">
+                        <a href="https://shmacs.org" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Explore SHMACS <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                        <a href="https://github.com/shmacs/shmacs" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> View code</a>
+                    </div>
+                </div>
+                <figure class="venture-preview">
+                    <a href="media/shmacs-platform-2026.png" target="_blank" rel="noopener noreferrer" aria-label="View the full SHMACS platform screenshot">
+                        <img src="media/shmacs-platform-2026.png" width="2555" height="1268" loading="lazy" alt="SHMACS homepage with the headline everything in one place, a college comparison entry point, and searchable school selection.">
+                    </a>
+                    <figcaption>SHMACS &mdash; one place to discover courses and plan your academic journey.</figcaption>
+                </figure>
+                <div class="venture-details">
+                    <div>
+                        <h4>Built around students</h4>
+                        <p>Designed to make course selection and long-term planning easier, with advising support that helps students prepare for advisor conversations and navigate their options between appointments.</p>
+                    </div>
+                    <div>
+                        <h4>From product to institution</h4>
+                        <p>We've spoken with multiple high school and university officials about potential implementation, exploring how SHMACS could support students and fit into existing academic advising workflows.</p>
+                    </div>
+                    <div>
+                        <h4>Engineering the platform</h4>
+                        <p>A redesigned Vue interface, multi-term course browsing, CDN-backed school data, and scraper-driven catalog pipelines bring academic information into a unified experience.</p>
+                    </div>
+                </div>
+                <div class="project-tech venture-tech">
+                    <span class="tech-tag">Vue 3</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Rust/WASM</span>
+                    <span class="tech-tag">Academic Planning</span>
+                    <span class="tech-tag">Advising Support</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -216,33 +263,34 @@
                 <span class="code-tag">&lt;projects&gt;</span>
             </h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                    </div>
+                <article class="project-card quant-project" aria-labelledby="quant-project-title">
                     <div class="project-content">
-                        <h3>SHMACS</h3>
-                        <p>AI-first course discovery platform built from a QuACS fork, with a redesigned Vue interface, multi-term course browsing, CDN-backed school data, and scraper-driven catalog pipelines.</p>
+                        <p class="project-eyebrow">Recent project / Quantitative research</p>
+                        <h3 id="quant-project-title">Automated Crypto Prediction Markets</h3>
+                        <p>Co-developed an automated trading system for crypto up/down prediction markets. Our custom learning model compares its confidence against a statistical baseline to inform buy and sell prices, connecting quantitative research to API-driven execution.</p>
+                        <ul class="quant-details">
+                            <li><strong>Market data pipeline.</strong> Scrapes online crypto data to supply inputs for strategy research and automated trading decisions.</li>
+                            <li><strong>Multi-signal strategies.</strong> Combines volatility, momentum, and options data from publicly traded funds holding the underlying coins.</li>
+                            <li><strong>Model-to-statistics comparison.</strong> Evaluates learned confidence alongside statistical estimates to guide entry and exit pricing.</li>
+                            <li><strong>Automated execution.</strong> Connects the decision process to buy and sell orders through trading APIs.</li>
+                        </ul>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue 3</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Rust/WASM</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/shmacs/shmacs" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                                Code
-                            </a>
-                            <a href="https://shmacs.org" class="project-link" target="_blank" rel="noopener noreferrer">
-                                <i class="fas fa-external-link-alt"></i>
-                                Live Site
-                            </a>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Statistical Modeling</span>
+                            <span class="tech-tag">Signal Engineering</span>
+                            <span class="tech-tag">API Execution</span>
                         </div>
                     </div>
-                </div>
+                    <figure class="quant-results">
+                        <div class="results-heading">2026 P&amp;L snapshot</div>
+                        <div class="results-value">+$1,048.54</div>
+                        <p class="results-label">PnL after fees</p>
+                        <a class="results-image-link" href="media/crypto-prediction-pnl-2026.png" target="_blank" rel="noopener noreferrer" aria-label="Open the original 2026 profit and loss screenshot">
+                            <img src="media/crypto-prediction-pnl-2026.png" width="433" height="217" alt="2026 profit and loss: plus $1,048.54 with fees and plus $1,200.35 without fees." loading="lazy">
+                        </a>
+                        <figcaption>+$1,200.35 before fees. Captured September 27, 2026. Select the image to view the original.</figcaption>
+                    </figure>
+                </article>
 
                 <div class="project-card">
                     <div class="project-image">
@@ -407,7 +455,7 @@
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
                     <a href="personal.html" class="personal-link">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-user"></i>
                         About Me
                     </a>
                 </div>

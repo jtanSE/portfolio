@@ -499,6 +499,235 @@ body {
     color: var(--primary-color);
 }
 
+/* Featured business */
+.venture {
+    padding: 100px 0;
+    scroll-margin-top: 65px;
+}
+
+.venture-card {
+    background: var(--surface-color);
+    border: 1px solid rgba(255, 183, 43, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.venture-intro {
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    background: radial-gradient(ellipse at top right, rgba(255, 183, 43, 0.12), transparent 65%);
+}
+
+.venture-eyebrow {
+    color: #ffbf47;
+    font: 500 0.8rem 'JetBrains Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.venture-intro h3 {
+    max-width: 850px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.5rem;
+}
+
+.venture-lead {
+    max-width: 850px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.venture-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.venture-actions .btn-primary {
+    background: #ffbf47;
+    color: #141827;
+}
+
+.venture-preview {
+    margin: 0;
+}
+
+.venture-preview a,
+.venture-preview img {
+    display: block;
+    width: 100%;
+}
+
+.venture-preview img {
+    height: auto;
+}
+
+.venture-preview a:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: -3px;
+}
+
+.venture-preview figcaption {
+    padding: 0.85rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.venture-details {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2.5rem clamp(1.5rem, 5vw, 3.5rem) 1.5rem;
+}
+
+.venture-details h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.venture-details p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.venture-tech {
+    padding: 0 clamp(1.5rem, 5vw, 3.5rem) 2.5rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .venture-details {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .venture .section-title {
+        font-size: clamp(1rem, 5vw, 2rem);
+    }
+}
+
+/* Featured quantitative trading project */
+.quant-project {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    border-color: rgba(0, 212, 255, 0.35);
+}
+
+.quant-project .project-content {
+    padding: 2rem;
+}
+
+.quant-project .project-eyebrow {
+    color: var(--primary-color);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.quant-project h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.25;
+}
+
+.quant-details {
+    padding-left: 1.15rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-size: 0.9rem;
+}
+
+.quant-details li + li {
+    margin-top: 0.65rem;
+}
+
+.quant-details strong {
+    color: var(--text-primary);
+}
+
+.quant-project .project-tech {
+    margin-bottom: 0;
+}
+
+.quant-results {
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(145deg, rgba(0, 212, 255, 0.08), rgba(39, 202, 63, 0.04));
+    border-left: 1px solid var(--border-color);
+}
+
+.results-heading {
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.results-value {
+    color: #6ee7b7;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.results-label {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.results-image-link {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.results-image-link:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+}
+
+.results-image-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.quant-results figcaption {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .quant-project {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .quant-project .project-content,
+    .quant-results {
+        padding: 1.5rem;
+    }
+
+    .quant-results {
+        border-left: 0;
+        border-top: 1px solid var(--border-color);
+    }
+}
+
 /* Experience Section */
 .experience {
     padding: 100px 0;
