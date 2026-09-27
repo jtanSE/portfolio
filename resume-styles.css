@@ -1,0 +1,128 @@
+:root {
+    color-scheme: light;
+    --ink: #17283d;
+    --muted: #526278;
+    --accent: #087c91;
+    --line: #dce5eb;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 32px 24px 64px;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.7;
+    color: var(--ink);
+    background: #edf2f6;
+}
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid #12a7bd; outline-offset: 5px; }
+.resume-toolbar {
+    max-width: 1040px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 0.9rem;
+}
+.resume-toolbar a { font-weight: 600; text-decoration: none; }
+.download-button {
+    background: var(--ink);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.resume-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 70px #17283d0d;
+}
+.header {
+    padding: 48px 56px;
+    background: #142b40;
+    color: white;
+    border-top: 6px solid #16b4c8;
+}
+.header h1 {
+    margin: 0 0 16px;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+.contact-info { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 0.95rem; color: #d5e5f0; }
+.contact-info a { color: #87e5ef; }
+.main-content { padding: 44px 56px; }
+.section { margin-bottom: 40px; }
+.section:last-child { margin-bottom: 0; }
+.section h2 {
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.objective { font-size: 1.05rem; color: var(--muted); }
+.skill-row {
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: #f3f7f9;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+.skill-row strong { display: block; color: var(--ink); margin-bottom: 3px; }
+.experience-item { margin-bottom: 26px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.experience-item:last-child { margin-bottom: 0; padding-bottom: 0; border: 0; }
+.item-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 14px; }
+.item-title { font-weight: 700; font-size: 1.08rem; }
+.item-link { display: block; font-size: 0.82rem; font-weight: 400; margin-top: 4px; overflow-wrap: anywhere; }
+.item-date, .education-date { color: var(--muted); font-size: 0.85rem; }
+.item-description ul { padding-left: 22px; margin: 0; }
+.item-description li { color: var(--muted); margin-bottom: 9px; font-size: 0.95rem; }
+.item-description li:last-child { margin-bottom: 0; }
+.item-description li::marker { color: var(--accent); }
+.item-description strong { color: var(--ink); font-weight: 600; }
+.education-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 16px 0; }
+.education-line + .education-line { border-top: 1px solid var(--line); }
+.education-degree { font-weight: 600; }
+.education-gpa { display: block; color: var(--accent); font-size: 0.9rem; margin-top: 4px; }
+
+@media (max-width: 600px) {
+    body { padding: 16px 12px 32px; }
+    .header { padding: 30px 24px; }
+    .main-content { padding: 28px 24px; }
+    .contact-info { flex-direction: column; }
+    .item-header { flex-direction: column; gap: 6px; }
+    .section { margin-bottom: 30px; }
+}
+
+@media print {
+    @page { size: letter; margin: 0.5in; }
+    body { padding: 0; background: white; font-size: 10pt; line-height: 1.4; }
+    .resume-toolbar { display: none; }
+    .resume-container { max-width: none; border: 0; border-radius: 0; box-shadow: none; }
+    .header { padding: 0 0 16px; background: white; color: var(--ink); border: 0; }
+    .header h1 { font-size: 26pt; margin-bottom: 8px; }
+    .contact-info, .contact-info a { color: var(--ink); font-size: 9pt; }
+    .main-content { padding: 0; }
+    .section { margin-bottom: 20px; }
+    .section h2 { break-after: avoid; margin-bottom: 10px; }
+    .skill-row { padding: 5px 0; background: none; font-size: 9pt; }
+    .skill-row strong { display: inline; }
+    .objective, .item-description li { font-size: 10pt; }
+    .experience-item, .education-line { break-inside: avoid; }
+    .experience-item { padding-bottom: 12px; margin-bottom: 12px; }
+    .item-header { margin-bottom: 8px; }
+    .item-title { font-size: 11pt; }
+}
